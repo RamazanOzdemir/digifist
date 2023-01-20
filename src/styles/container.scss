@@ -1,0 +1,237 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+/* 
+    CONTAINER STYLES
+
+    - APP
+    - BANNER 
+    - CONTENT
+    - HERO
+    - PRODUCT 
+*/
+/* ### APP START ### */
+.c-app {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+
+  position: relative;
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-small) {
+  .c-app {
+    position: static;
+    display: flex;
+  }
+}
+
+/* ### APP END ### */
+
+/* ### BANNER START ### */
+.c-banner {
+  height: 31.21rem;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: $grey-light;
+  &__image {
+    object-fit: cover;
+    object-position: 50% 0%;
+  }
+}
+
+/* FOR TABLET */
+@media (min-width: $br-small) {
+  .c-banner {
+    height: 99vh;
+    width: 40vw;
+
+    position: static;
+  }
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-mid) {
+  .c-banner {
+    width: 50vw;
+  }
+}
+
+/* ### BANNER END ### */
+
+/* ### CONTENT START ### */
+.c-content {
+  width: 100%;
+
+  position: absolute;
+  top: 15.65rem;
+}
+
+/* FOR TABLET */
+@media (min-width: $br-small) {
+  .c-content {
+    height: 100vh;
+    width: 60vw;
+
+    overflow-y: auto;
+    position: static;
+
+    padding-left: 3.5rem;
+    padding-top: 6rem;
+  }
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-mid) {
+  .c-content {
+    width: 50vw;
+
+    padding-left: 7.5rem;
+  }
+}
+/* ### CONTENT END ###*/
+
+/* ### HERO START ### */
+.c-hero {
+  width: 100%;
+
+  color: $white;
+  padding: 0px 1.72rem;
+
+  &__heading {
+    font-size: 1.43rem;
+    line-height: 1.86rem;
+    font-family: 'ITC Avant Garde Gothic Pro';
+    font-style: normal;
+
+    margin-top: 2rem;
+    margin-bottom: 0px;
+
+    @include multiple-line-truncate(3);
+  }
+
+  &__caption {
+    display: none;
+    @include multiple-line-truncate(2);
+  }
+
+  &__link {
+    display: inline-block;
+
+    font-size: 0.91rem;
+    line-height: 1.25rem;
+    font-family: 'Avenir';
+    font-style: normal;
+
+    text-decoration: underline;
+    text-underline-offset: 0.36rem;
+
+    margin-top: 1.14rem;
+    margin-bottom: 0px;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    &:visited {
+      color: $white;
+    }
+  }
+}
+
+/* FOR TABLET */
+@media (min-width: $br-small) {
+  .c-hero {
+    color: $black;
+
+    padding: 0px;
+    padding-right: 2.63rem;
+
+    &__heading {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 110%;
+
+      margin-top: 0px;
+    }
+
+    &__caption {
+      color: $grey;
+      display: block;
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 160%;
+
+      margin-top: 0.75;
+    }
+
+    &__link {
+      margin-top: 1.6rem;
+
+      &:visited {
+        color: $black;
+      }
+    }
+  }
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-mid) {
+  .c-hero {
+    padding-right: 6.63rem;
+
+    &__heading {
+      font-size: 2rem;
+      line-height: 130%;
+    }
+
+    &__link {
+      margin-top: 2rem;
+    }
+  }
+}
+/* ### HERO END ###*/
+
+/* ### PRODUCT START ### */
+.c-product {
+  width: 100%;
+
+  margin-top: 2.3rem;
+  margin-bottom: 3.3rem;
+  padding-left: 1.72rem;
+
+  &__carousel-item {
+    padding-right: 0.85rem;
+  }
+}
+
+/* FOR TABLET */
+@media (min-width: $br-small) {
+  .c-product {
+    margin-top: 3rem;
+    padding-left: 0;
+
+    &__carousel-item {
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-mid) {
+  .c-product {
+    margin-top: 4.25rem;
+
+    &__carousel-item {
+      padding-right: 2rem;
+    }
+  }
+}
+/* ### PRODUCT END ###*/

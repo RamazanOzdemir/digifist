@@ -1,0 +1,85 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.product-card {
+  width: 10.58rem;
+  margin-bottom: 0.5rem;
+
+  &__content {
+    height: 14.3rem;
+    background-color: $grey-light;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  &__info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-family: 'Avenir';
+    font-style: normal;
+
+    &__caption {
+      min-height: 2.86rem;
+
+      margin-top: 0.3rem;
+      font-weight: 400;
+      font-size: 0.91rem;
+      line-height: 160%;
+      text-align: left;
+
+      @include multiple-line-truncate(2);
+    }
+
+    &__footer {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__price {
+      margin-top: 0.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+      font-size: 0.91rem;
+      line-height: 160%;
+    }
+  }
+}
+
+/* FOR DESkTOP */
+@media (min-width: $br-small) {
+  .product-card {
+    width: 14.38rem;
+
+    &__content {
+      height: 19.38rem;
+    }
+    &__info {
+      &__caption {
+        min-height: 1.25rem;
+        @include multiple-line-truncate(1);
+      }
+
+      &__footer {
+        padding-right: 0.5rem;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__price {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@mixin multiple-line-truncate($line) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  word-break: break-word;
+}

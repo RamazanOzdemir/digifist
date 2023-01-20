@@ -1,0 +1,52 @@
+@import '@/styles/variables.scss';
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  &__items {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem;
+
+    z-index: 100;
+
+    &__button {
+      height: 2.85rem;
+      width: 2.85rem;
+
+      padding: 1rem;
+      border-radius: 0.3rem;
+      background-color: $arrow-button;
+      border: 0;
+    }
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &__left-arrow {
+    left: 0;
+  }
+
+  &__right-arrow {
+    right: 0;
+  }
+}

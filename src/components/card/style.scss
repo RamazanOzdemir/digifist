@@ -1,0 +1,27 @@
+@import '@/styles/variables.scss';
+
+.card {
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px $grey-light;
+
+  &__content {
+    width: 100%;
+    min-height: 2rem;
+
+    overflow: hidden;
+
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  &__footer {
+    width: 100%;
+    min-height: 2rem;
+
+    padding: 0.5rem 0px;
+    overflow: hidden;
+
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: $white;
+  }
+}

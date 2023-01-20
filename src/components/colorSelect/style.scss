@@ -1,0 +1,33 @@
+@import '@/styles/variables.scss';
+
+.color-select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  &__option {
+    height: 10.6px;
+    width: 10.6px;
+
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50%;
+
+    span {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &--selected {
+      border: 1.5px solid $black;
+      padding: 1.2px;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
