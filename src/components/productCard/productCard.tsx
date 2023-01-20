@@ -1,7 +1,6 @@
 import { FC, useCallback, useState } from 'react';
 import { Card, CardContent, CardFooter } from '../card';
 import { Image } from '../image';
-import ProductImage from '@/assets/images/product-1.png';
 import { ColorSelect } from '../colorSelect';
 import { IProductOption } from '@/models';
 

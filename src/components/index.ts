@@ -3,3 +3,4 @@ export * from './carousel';
 export * from './colorSelect';
 export * from './image';
 export * from './productCard';
+export * from './skeleton';

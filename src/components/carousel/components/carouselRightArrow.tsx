@@ -32,8 +32,10 @@ export const CarouselRightArrow: FC<CarouselRightArrowProps> = (props) => {
   };
 
   useEffect(() => {
+    const parentNode = ref?.current?.parentNode;
+
     const updateWidth = () => {
-      const parentWidth = ref?.current?.parentNode?.clientWidth || 0;
+      const parentWidth = parentNode?.clientWidth || 0;
       const currentWidth = Math.ceil(width * count) || 0;
 
       if (parentWidth >= currentWidth && currentWidth != 0) {
@@ -44,7 +46,15 @@ export const CarouselRightArrow: FC<CarouselRightArrowProps> = (props) => {
     };
 
     updateWidth();
-  }, [width, count]);
+
+    const resizeObserver = new ResizeObserver(updateWidth);
+
+    resizeObserver.observe(parentNode);
+
+    return () => {
+      resizeObserver.unobserve(parentNode);
+    };
+  }, [width]);
 
   return (
     <div className={classNames} ref={ref}>

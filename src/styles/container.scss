@@ -49,7 +49,8 @@
 @media (min-width: $br-small) {
   .c-banner {
     height: 99vh;
-    width: 40vw;
+    width: auto;
+    max-width: 40vw;
 
     position: static;
   }
@@ -58,7 +59,7 @@
 /* FOR DESkTOP */
 @media (min-width: $br-mid) {
   .c-banner {
-    width: 50vw;
+    max-width: 50vw;
   }
 }
 
@@ -76,7 +77,8 @@
 @media (min-width: $br-small) {
   .c-content {
     height: 100vh;
-    width: 60vw;
+    width: auto;
+    flex: 1;
 
     overflow-y: auto;
     position: static;
@@ -89,8 +91,6 @@
 /* FOR DESkTOP */
 @media (min-width: $br-mid) {
   .c-content {
-    width: 50vw;
-
     padding-left: 7.5rem;
   }
 }
@@ -137,10 +137,6 @@
     &:hover {
       font-weight: bold;
     }
-
-    &:visited {
-      color: $white;
-    }
   }
 }
 
@@ -174,10 +170,6 @@
 
     &__link {
       margin-top: 1.6rem;
-
-      &:visited {
-        color: $black;
-      }
     }
   }
 }

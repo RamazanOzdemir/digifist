@@ -1,4 +1,25 @@
+.c-image {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
 .image {
   height: 100%;
   width: 100%;
+}
+
+.image__skeleton {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__disappear {
+    display: none;
+  }
 }
